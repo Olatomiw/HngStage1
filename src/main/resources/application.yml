@@ -1,0 +1,5 @@
+spring:
+  application.name=stage1Hng
+
+openWeather:
+  key: c0c538e29eac61bd5ad3e4ee5eb46b1a
