@@ -21,11 +21,11 @@ public class TaskController {
     @GetMapping("/api/hello")
     public Map<String, String> helloController(@RequestParam("visitor_name") String name, HttpServletRequest request){
         String clientIp = getClientIp(request);
-        String clientCity = getClientCity("197.210.79.240");
+        String clientCity = getClientCity(clientIp);
         String getWeather = getWeather(clientCity);
         Map<String, String> finalResponse = new HashMap<>();
 
-        finalResponse.put("greetings", " Hello "+ name+"!, the temperature is "+ getWeather+ " degree Celsius in" + clientCity + "");
+        finalResponse.put("greetings", "Hello "+ name+"!, the temperature is "+ getWeather+ " degree Celsius in " + clientCity + "");
         finalResponse.put("Location", clientCity);
         finalResponse.put("Client Ip", clientIp);
         return finalResponse;
