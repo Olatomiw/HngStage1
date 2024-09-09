@@ -39,13 +39,11 @@ public class TaskController {
     private String getClientIp(HttpServletRequest request){
         String clientIp;
         String xForwardedFor = request.getHeader("X-Forwarded-For");
-
         if (xForwardedFor == null){
             clientIp= request.getRemoteAddr();
         }else {
             clientIp = xForwardedFor.split(",")[0];
         }
-
         return clientIp;
     }
 
