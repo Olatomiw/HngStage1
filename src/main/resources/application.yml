@@ -1,5 +1,15 @@
+
 spring:
-  application.name=stage1Hng
+  application:
+    name:  application.name=stage1Hng
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weather_api
+    username: postgres
+    password: Password2000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 openWeather:
   key: c0c538e29eac61bd5ad3e4ee5eb46b1a
