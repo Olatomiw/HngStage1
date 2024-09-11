@@ -13,3 +13,7 @@ spring:
 
 openWeather:
   key: c0c538e29eac61bd5ad3e4ee5eb46b1a
+
+app:
+  jwt-secret-key: daf66e01593f61a15b857cf433aae03a005812b31234e149036bcc8dee755dcc
+  jwt-expiration: 604800000
